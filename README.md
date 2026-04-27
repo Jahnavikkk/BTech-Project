@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # LLM Judge and Classifier Robustness for Prompt Injection
 
 This repository documents an end-to-end safety evaluation pipeline:
@@ -90,3 +91,4 @@ Current repository status: `final_model_comparison.csv` exists but is **empty (0
 ## Important integrity note
 
 Some CSV verdict fields contain noisy free-form text in addition to `SAFE/UNSAFE`. Reported normalized accuracies in this README are computed after mapping standard values (`safe/benign/pass -> 0`, `unsafe/malicious/injection/fail -> 1`) and skipping unparsable entries.
+=======
