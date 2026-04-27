@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # LLM Judge and Classifier Robustness for Prompt Injection
 
 This repository documents an end-to-end safety evaluation pipeline:
@@ -6,6 +6,19 @@ This repository documents an end-to-end safety evaluation pipeline:
 **prompt-only failure -> human labeling -> llm-as-judge validation -> large-scale dataset generation -> classifier fine-tuning -> final classifier comparison**
 
 The implementation and artifacts are built around DeBERTa-style classifier training, PromptGuard-style behavior checks, and multiple LLM judge protocols.
+
+## Quick Demo
+
+This repository includes a minimal end-to-end demonstration of the safety pipeline.
+
+It shows:
+
+Prompt → Model Response → Classifier Prediction → Final Harmfulness Verdict
+
+Run:
+
+bash
+python src/demo.py
 
 ## What was actually run in this repo
 
