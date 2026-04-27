@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Environments
+venv/
+.venv/
+env/
+anaconda3/
+
+# Model weights
+*.pt
+*.bin
+*.safetensors
+checkpoints/
+
+# Logs
+*.log
+
+# Local archive
+_archive_local/
+
+# Large raw dataset (keep local only)
+data/prompts/wildjailbreak_prompts.csv
+
+# Mac junk
+.DS_Store
