@@ -1,5 +1,9 @@
 import pandas as pd
 from sklearn.metrics import cohen_kappa_score
+from pathlib import Path
+
+REPO_ROOT = Path(__file__).resolve().parents[2]
+HUMAN_LABEL_DIR = REPO_ROOT / "data" / "human_labeling"
 
 pairs = [
     ("annotator_set_1_A_annotated.csv", "annotator_set_1_B_annotated.csv"),
@@ -12,9 +16,9 @@ all_disagreements = []
 
 def read_file(file):
     try:
-        return pd.read_csv(file, encoding="latin1", engine="python", quotechar='"')
+        return pd.read_csv(HUMAN_LABEL_DIR / file, encoding="latin1", engine="python", quotechar='"')
     except:
-        return pd.read_csv(file, encoding="latin1", engine="python", quotechar='"')
+        return pd.read_csv(HUMAN_LABEL_DIR / file, encoding="latin1", engine="python", quotechar='"')
 
 def get_label_col(df):
     for c in df.columns:
@@ -107,8 +111,8 @@ full = pd.concat(all_data, ignore_index=True)
 disagree = pd.concat(all_disagreements, ignore_index=True)
 
 # save outputs
-full.to_csv("annotations_combined.csv", index=False)
-disagree.to_csv("annotation_disagreements.csv", index=False)
+full.to_csv(HUMAN_LABEL_DIR / "annotations_combined.csv", index=False)
+disagree.to_csv(HUMAN_LABEL_DIR / "annotation_disagreements.csv", index=False)
 
 print("\nSaved:")
 print("annotations_combined.csv")

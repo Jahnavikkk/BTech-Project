@@ -4,9 +4,13 @@ from datasets import Dataset
 from transformers import AutoTokenizer, AutoModelForSequenceClassification, Trainer, TrainingArguments
 from sklearn.metrics import classification_report
 import numpy as np
+from pathlib import Path
+
+REPO_ROOT = Path(__file__).resolve().parents[2]
+SCALED_DIR = REPO_ROOT / "data" / "scaled_datasets"
 
 # LOAD DATA
-df = pd.read_csv("balanced_dataset.csv")
+df = pd.read_csv(SCALED_DIR / "balanced_dataset.csv")
 
 # FORMAT
 df["text"] = df.apply(lambda x: f"Prompt: {x['prompt']}\nResponse: {x['response']}", axis=1)
@@ -39,7 +43,7 @@ model = AutoModelForSequenceClassification.from_pretrained(model_name, num_label
 
 # TRAINING
 args = TrainingArguments(
-    output_dir="./final_model",
+    output_dir=str(REPO_ROOT / "results" / "final_comparison" / "final_model"),
     per_device_train_batch_size=8,
     per_device_eval_batch_size=4,
     num_train_epochs=3,

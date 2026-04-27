@@ -1,0 +1,10 @@
+pandas
+numpy
+torch
+transformers
+datasets
+scikit-learn
+tqdm
+requests
+ollama
+huggingface-hub

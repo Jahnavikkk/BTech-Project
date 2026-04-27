@@ -4,6 +4,10 @@ import pandas as pd
 from datasets import load_dataset, load_from_disk
 from tqdm import tqdm
 import ollama
+from pathlib import Path
+
+REPO_ROOT = Path(__file__).resolve().parents[2]
+RESULTS_DIR = REPO_ROOT / "results" / "llm_judge_validation"
 
 # -------------------------
 # CONFIG
@@ -23,13 +27,13 @@ MODELS = {
     "qwen_0_5b": "qwen2.5:0.5b"
 }
 
-OUTPUT_CSV = "execution_matrix_1000.csv"
+OUTPUT_CSV = RESULTS_DIR / "execution_matrix_1000.csv"
 
 # Adjust paths if needed
-ARENA_PARQUET = "BTP_FINAL_DATA/chatbot_arena_conversations/chatbot_arena.parquet"
-DEEPSET_PATH = "local_datasets/deepset_prompt-injections"
-XTRAM_PATH = "local_datasets/xTRam1_safe-guard-prompt-injection"
-ADVBENCH_ARROW = "BTP_FINAL_DATA/data-00000-of-00001.arrow"
+ARENA_PARQUET = REPO_ROOT / "BTP_FINAL_DATA" / "chatbot_arena_conversations" / "chatbot_arena.parquet"
+DEEPSET_PATH = REPO_ROOT / "local_datasets" / "deepset_prompt-injections"
+XTRAM_PATH = REPO_ROOT / "local_datasets" / "xTRam1_safe-guard-prompt-injection"
+ADVBENCH_ARROW = REPO_ROOT / "BTP_FINAL_DATA" / "data-00000-of-00001.arrow"
 
 
 # -------------------------

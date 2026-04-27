@@ -57,6 +57,21 @@ archive_file() {
   safe_move "$src" "$dst"
 }
 
+# Move from root if present; otherwise restore from _archive_local if present.
+safe_move_or_restore() {
+  local rel="$1"
+  local dst="$2"
+  if [[ -e "$rel" ]]; then
+    safe_move "$rel" "$dst"
+    return 0
+  fi
+  if [[ -e "_archive_local/$rel" ]]; then
+    safe_move "_archive_local/$rel" "$dst"
+    return 0
+  fi
+  echo "[SKIP] Missing in root and archive: $rel"
+}
+
 # -------------------------------------------------------------------
 # Create required folder structure
 # -------------------------------------------------------------------
@@ -71,14 +86,23 @@ safe_mkdir "${REPO_ROOT}/src/finetuning"
 safe_mkdir "${REPO_ROOT}/src/comparison"
 
 safe_mkdir "${REPO_ROOT}/experiments/prompt_only_vs_cot"
+safe_mkdir "${REPO_ROOT}/experiments/A1_static_classifier"
+safe_mkdir "${REPO_ROOT}/experiments/promptguard_baseline"
+safe_mkdir "${REPO_ROOT}/experiments/A2_cot_static"
+safe_mkdir "${REPO_ROOT}/experiments/A3_llm_judge"
+safe_mkdir "${REPO_ROOT}/experiments/A4_pipeline"
 safe_mkdir "${REPO_ROOT}/experiments/self_correction"
 safe_mkdir "${REPO_ROOT}/experiments/committee_judge"
+safe_mkdir "${REPO_ROOT}/experiments/committee_analysis"
 safe_mkdir "${REPO_ROOT}/experiments/sigir_eval"
 safe_mkdir "${REPO_ROOT}/experiments/spectral_eval"
 safe_mkdir "${REPO_ROOT}/experiments/llm_judge_matrix"
+safe_mkdir "${REPO_ROOT}/experiments/agreement_analysis"
 
 safe_mkdir "${REPO_ROOT}/results/prompt_only_failure"
 safe_mkdir "${REPO_ROOT}/results/llm_judge_validation"
+safe_mkdir "${REPO_ROOT}/results/A4_pipeline"
+safe_mkdir "${REPO_ROOT}/results/committee"
 safe_mkdir "${REPO_ROOT}/results/final_comparison"
 safe_mkdir "${REPO_ROOT}/results/artifacts/cot"
 
@@ -143,11 +167,27 @@ safe_move "run_prompt_plus_cot_eval.py" "experiments/prompt_only_vs_cot/run_prom
 safe_move "run_llm_judge_prompt_vs_prompt_cot.py" "experiments/prompt_only_vs_cot/run_llm_judge_prompt_vs_prompt_cot.py"
 safe_move "run_prompt_vs_prompt_plus_cot_FAST.py" "experiments/prompt_only_vs_cot/run_prompt_vs_prompt_plus_cot_FAST.py"
 safe_move "run_cot_evaluation.py" "experiments/prompt_only_vs_cot/run_cot_evaluation.py"
+safe_move_or_restore "run_baseline_deberta.py" "experiments/A1_static_classifier/run_baseline_deberta.py"
+safe_move_or_restore "finetune_promptguard.py" "experiments/promptguard_baseline/finetune_promptguard.py"
+safe_move_or_restore "finetune_promptguard_9k.py" "experiments/promptguard_baseline/finetune_promptguard_9k.py"
+safe_move_or_restore "approach_2_cot.py" "experiments/A2_cot_static/approach_2_cot.py"
+safe_move_or_restore "run_a2_self_correction_deberta.py" "experiments/A2_cot_static/run_a2_self_correction_deberta.py"
+safe_move_or_restore "run_finetune_prompt_cot.py" "experiments/A2_cot_static/run_finetune_prompt_cot.py"
+safe_move_or_restore "run_a4_pipeline.py" "experiments/A4_pipeline/run_a4_pipeline.py"
+safe_move_or_restore "a4_small_cot_gemma2b.py" "experiments/A4_pipeline/a4_small_cot_gemma2b.py"
+safe_move_or_restore "a4_large_judge_gemma27b.py" "experiments/A4_pipeline/a4_large_judge_gemma27b.py"
 safe_move "run_self_correction_eval.py" "experiments/self_correction/run_self_correction_eval.py"
 safe_move "run_committee_judging.py" "experiments/committee_judge/run_committee_judging.py"
+safe_move_or_restore "run_committee_generation.py" "experiments/committee_judge/run_committee_generation.py"
+safe_move_or_restore "run_committee_analysis.py" "experiments/committee_analysis/run_committee_analysis.py"
+safe_move_or_restore "analyze_committee_results.py" "experiments/committee_analysis/analyze_committee_results.py"
 safe_move "run_sigir_llm_judge.py" "experiments/sigir_eval/run_sigir_llm_judge.py"
 safe_move "run_spectral_interrogation.py" "experiments/spectral_eval/run_spectral_interrogation.py"
+safe_move_or_restore "analyze_spectral_data.py" "experiments/spectral_eval/analyze_spectral_data.py"
 safe_move "run_execution_matrix.py" "experiments/llm_judge_matrix/run_execution_matrix.py"
+safe_move_or_restore "agreement_llm_vs_human.py" "experiments/agreement_analysis/agreement_llm_vs_human.py"
+safe_move_or_restore "agreement_check.py" "experiments/agreement_analysis/agreement_check.py"
+safe_move_or_restore "analyze_results.py" "experiments/agreement_analysis/analyze_results.py"
 
 # results/prompt_only_failure
 safe_move "prompt_plus_cot_results.csv" "results/prompt_only_failure/prompt_plus_cot_results.csv"
@@ -167,9 +207,17 @@ safe_move "sigir_deepset_prompt_plus_cot.csv" "results/llm_judge_validation/sigi
 safe_move "sigir_xtram_prompt_only.csv" "results/llm_judge_validation/sigir_xtram_prompt_only.csv"
 safe_move "sigir_xtram_prompt_plus_cot.csv" "results/llm_judge_validation/sigir_xtram_prompt_plus_cot.csv"
 safe_move "spectral_data.csv" "results/llm_judge_validation/spectral_data.csv"
+safe_move "execution_matrix_1000.csv" "results/llm_judge_validation/execution_matrix_1000.csv"
+safe_move "execution_matrix_cleaned.csv" "results/llm_judge_validation/execution_matrix_cleaned.csv"
+safe_move "committee_generations.csv" "results/committee/committee_generations.csv"
+safe_move "committee_generations_balanced_v2.csv" "results/committee/committee_generations_balanced_v2.csv"
+safe_move "committee_judged_results.csv" "results/committee/committee_judged_results.csv"
+safe_move "a4_pipeline_results.csv" "results/A4_pipeline/a4_pipeline_results.csv"
 
 # results/final_comparison
 safe_move "final_model_comparison.csv" "results/final_comparison/final_model_comparison.csv"
+safe_move "generated_dataset.csv" "data/scaled_datasets/generated_dataset.csv"
+safe_move "final_training_dataset.csv" "data/scaled_datasets/final_training_dataset.csv"
 
 # artifacts/cot -> results/artifacts/cot
 safe_move "artifacts/cot/advbench_prompt_cot.json" "results/artifacts/cot/advbench_prompt_cot.json"
@@ -227,15 +275,7 @@ done
 
 # Archive extra scripts not in final KEEP mapping (without deleting)
 EXTRA_SCRIPTS=(
-  "a4_large_judge_gemma27b.py"
-  "a4_small_cot_gemma2b.py"
-  "agreement_check.py"
-  "agreement_llm_vs_human.py"
-  "analyze_committee_results.py"
   "analyze_correction_results.py"
-  "analyze_results.py"
-  "analyze_spectral_data.py"
-  "approach_2_cot.py"
   "approach_3_gemma.py"
   "approach_3_gemma_upd.py"
   "approach_3_llm.py"
@@ -248,8 +288,6 @@ EXTRA_SCRIPTS=(
   "download_model.py"
   "eval_qualifire.py"
   "exp2_behavior_model.py"
-  "finetune_promptguard.py"
-  "finetune_promptguard_9k.py"
   "flatten_for_annotation.py"
   "full_pipeline.py"
   "generate_advbench_cot.py"
@@ -262,13 +300,7 @@ EXTRA_SCRIPTS=(
   "omt_finetuneattempt1.py"
   "plot.py"
   "refill_deepset_langdetect.py"
-  "run_a2_self_correction_deberta.py"
-  "run_a4_pipeline.py"
-  "run_baseline_deberta.py"
-  "run_committee_analysis.py"
-  "run_committee_generation.py"
   "run_deepset_remaining.py"
-  "run_finetune_prompt_cot.py"
   "run_prompt+cot_v2.py"
   "sanitycheck.py"
   "sanitycheck2.py"

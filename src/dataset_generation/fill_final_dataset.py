@@ -1,9 +1,13 @@
 import pandas as pd
+from pathlib import Path
+
+REPO_ROOT = Path(__file__).resolve().parents[2]
+SCALED_DIR = REPO_ROOT / "data" / "scaled_datasets"
 
 # -----------------------------
 # LOAD
 # -----------------------------
-df = pd.read_csv("final_dataset_3000_ollama.csv")
+df = pd.read_csv(SCALED_DIR / "final_dataset_3000_ollama.csv")
 
 print("Initial rows:", len(df))
 
@@ -50,6 +54,6 @@ print(df.groupby("prompt_id").size().value_counts())
 # -----------------------------
 df = df[["prompt_id", "prompt", "dataset", "model_name", "response", "final_label", "is_reconstructed"]]
 
-df.to_csv("final_training_dataset_3000_clean.csv", index=False)
+df.to_csv(SCALED_DIR / "final_training_dataset_3000_clean.csv", index=False)
 
 print("\n✅ Saved: final_training_dataset_3000_clean.csv")

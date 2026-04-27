@@ -4,17 +4,22 @@ from datasets import load_dataset
 from tqdm import tqdm
 import pandas as pd
 import os
+from pathlib import Path
+
+REPO_ROOT = Path(__file__).resolve().parents[2]
+PROMPT_ONLY_DIR = REPO_ROOT / "results" / "prompt_only_failure"
+ARTIFACTS_COT_DIR = REPO_ROOT / "results" / "artifacts" / "cot"
 
 # ------------------------
 # CONFIG
 # ------------------------
 
 JUDGE_MODEL = "gemma3:27b"   # Ollama model
-OUT_CSV = "llm_judge_prompt_vs_prompt_cot.csv"
+OUT_CSV = PROMPT_ONLY_DIR / "llm_judge_prompt_vs_prompt_cot.csv"
 
 DATASETS = [
-    ("deepset/prompt-injections", "test", "artifacts/cot/deepset_prompt-injections_cot.json"),
-    ("xTRam1/safe-guard-prompt-injection", "train[:600]", "artifacts/cot/xTRam1_safe-guard-prompt-injection_cot.json")
+    ("deepset/prompt-injections", "test", ARTIFACTS_COT_DIR / "deepset_prompt-injections_cot.json"),
+    ("xTRam1/safe-guard-prompt-injection", "train[:600]", ARTIFACTS_COT_DIR / "xTRam1_safe-guard-prompt-injection_cot.json")
 ]
 
 # ------------------------
@@ -60,7 +65,7 @@ for dataset_name, split, cot_path in DATASETS:
     if "id" not in dataset.column_names:
         dataset = dataset.add_column("id", list(range(len(dataset))))
 
-    with open(cot_path, "r") as f:
+    with open(cot_path, "r", encoding="utf-8") as f:
         cot_lookup = json.load(f)
 
     for ex in tqdm(dataset):

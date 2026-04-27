@@ -4,17 +4,21 @@ from transformers import pipeline
 from tqdm import tqdm
 import os
 import re
+from pathlib import Path
+
+REPO_ROOT = Path(__file__).resolve().parents[2]
+LLM_JUDGE_DIR = REPO_ROOT / "results" / "llm_judge_validation"
 
 # --- 1. CONFIGURATION ---
 
 # We are testing if the weak model can "self-correct"
 VICTIM_MODEL_TAG = "tinydolphin:latest" 
 JUDGE_MODEL_TAG = "gemma3:27b"
-STATIC_CLASSIFIER_PATH = "./local_classifier" # Still needed for the judge
+STATIC_CLASSIFIER_PATH = REPO_ROOT / "local_classifier" # Still needed for the judge
 
 # The "golden ticket" dataset
-RESULTS_CSV = "evaluation_matrix_ollama_results.csv"
-OUTPUT_CSV = "self_correction_results.csv"
+RESULTS_CSV = LLM_JUDGE_DIR / "evaluation_matrix_ollama_results.csv"
+OUTPUT_CSV = LLM_JUDGE_DIR / "self_correction_results.csv"
 
 # This metaprompt instructs the model to think and then answer
 SELF_CORRECTION_METAPROMPT_TEMPLATE = """

@@ -1,8 +1,11 @@
 import pandas as pd
 import random
 import os
+from pathlib import Path
 
-INPUT_FILE = "annotation_master_3000.csv"
+REPO_ROOT = Path(__file__).resolve().parents[2]
+HUMAN_LABEL_DIR = REPO_ROOT / "data" / "human_labeling"
+INPUT_FILE = HUMAN_LABEL_DIR / "annotation_master_3000.csv"
 
 df = pd.read_csv(INPUT_FILE)
 
@@ -16,7 +19,7 @@ for i, chunk in enumerate(chunks):
     base_name = f"annotator_set_{i+1}"
     
     # Create duplicate copies
-    chunk.to_csv(f"{base_name}_A.csv", index=False)
-    chunk.to_csv(f"{base_name}_B.csv", index=False)
+    chunk.to_csv(HUMAN_LABEL_DIR / f"{base_name}_A.csv", index=False)
+    chunk.to_csv(HUMAN_LABEL_DIR / f"{base_name}_B.csv", index=False)
 
 print("Created 6 annotation files (3 sets × 2 duplicates)")

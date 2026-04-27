@@ -4,6 +4,11 @@ import pandas as pd
 from tqdm import tqdm
 from datasets import load_dataset
 from sklearn.metrics import accuracy_score, precision_recall_fscore_support
+from pathlib import Path
+
+REPO_ROOT = Path(__file__).resolve().parents[2]
+ARTIFACTS_COT_DIR = REPO_ROOT / "results" / "artifacts" / "cot"
+LLM_JUDGE_DIR = REPO_ROOT / "results" / "llm_judge_validation"
 
 # ------------------------
 # CONFIG
@@ -18,18 +23,18 @@ DATASETS = {
         "split": "test",
         "text_key": "text",
         "label_key": "label",
-        "cot_file": "artifacts/cot/deepset_prompt-injections_cot.json",
-        "out_prompt_only": "sigir_deepset_prompt_only.csv",
-        "out_prompt_cot": "sigir_deepset_prompt_plus_cot.csv",
+        "cot_file": ARTIFACTS_COT_DIR / "deepset_prompt-injections_cot.json",
+        "out_prompt_only": LLM_JUDGE_DIR / "sigir_deepset_prompt_only.csv",
+        "out_prompt_cot": LLM_JUDGE_DIR / "sigir_deepset_prompt_plus_cot.csv",
     },
     "xtram": {
         "hf_name": "xTRam1/safe-guard-prompt-injection",
         "split": "train[:600]",
         "text_key": "text",
         "label_key": "label",
-        "cot_file": "artifacts/cot/xTRam1_safe-guard-prompt-injection_cot.json",
-        "out_prompt_only": "sigir_xtram_prompt_only.csv",
-        "out_prompt_cot": "sigir_xtram_prompt_plus_cot.csv",
+        "cot_file": ARTIFACTS_COT_DIR / "xTRam1_safe-guard-prompt-injection_cot.json",
+        "out_prompt_only": LLM_JUDGE_DIR / "sigir_xtram_prompt_only.csv",
+        "out_prompt_cot": LLM_JUDGE_DIR / "sigir_xtram_prompt_plus_cot.csv",
     },
 }
 
@@ -71,7 +76,7 @@ def call_judge(prompt):
     return response["message"]["content"].strip().upper()
 
 def load_cot(path):
-    with open(path, "r") as f:
+    with open(path, "r", encoding="utf-8") as f:
         return json.load(f)
 
 def compute_metrics(df):
@@ -155,7 +160,7 @@ if __name__ == "__main__":
             "--------------------------------------------------\n"
         )
 
-    with open("sigir_llm_judge_metrics.txt", "w") as f:
+    with open(LLM_JUDGE_DIR / "sigir_llm_judge_metrics.txt", "w", encoding="utf-8") as f:
         f.writelines(metrics_report)
 
     print("\nSIGIR LLM-as-Judge experiment completed.")

@@ -5,6 +5,12 @@ from tqdm import tqdm
 from transformers import AutoTokenizer, AutoModelForSequenceClassification
 from sklearn.metrics import classification_report
 from concurrent.futures import ThreadPoolExecutor, as_completed
+from pathlib import Path
+
+REPO_ROOT = Path(__file__).resolve().parents[2]
+SCALED_DIR = REPO_ROOT / "data" / "scaled_datasets"
+RESULTS_DIR = REPO_ROOT / "results" / "final_comparison"
+RESULTS_DIR.mkdir(parents=True, exist_ok=True)
 
 # -------------------------
 # CONFIG
@@ -18,7 +24,7 @@ MAX_WORKERS = 2  # keep small (LLM heavy)
 # -------------------------
 # LOAD DATA
 # -------------------------
-df = pd.read_csv("balanced_dataset.csv")
+df = pd.read_csv(SCALED_DIR / "balanced_dataset.csv")
 
 texts = [
     f"Prompt: {p}\nResponse: {r}"
@@ -126,3 +132,11 @@ print(classification_report(y_true, pg_preds, digits=4))
 
 print("\n=== LLM JUDGE RESULTS ===")
 print(classification_report(y_true_llm, llm_preds_clean, digits=4))
+
+comparison_df = pd.DataFrame(
+    [
+        {"model": "PromptGuard", "split": "balanced_dataset", "n": len(y_true), "report": classification_report(y_true, pg_preds, digits=4, output_dict=False)},
+        {"model": "LLM_Judge", "split": "balanced_dataset_valid_llm", "n": len(y_true_llm), "report": classification_report(y_true_llm, llm_preds_clean, digits=4, output_dict=False)},
+    ]
+)
+comparison_df.to_csv(RESULTS_DIR / "final_model_comparison.csv", index=False)

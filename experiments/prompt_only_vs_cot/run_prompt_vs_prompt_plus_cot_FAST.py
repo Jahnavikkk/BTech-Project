@@ -7,6 +7,11 @@ import sys
 import random
 from datasets import load_from_disk
 from sklearn.metrics import accuracy_score, confusion_matrix, classification_report
+from pathlib import Path
+
+REPO_ROOT = Path(__file__).resolve().parents[2]
+PROMPT_ONLY_DIR = REPO_ROOT / "results" / "prompt_only_failure"
+LLM_JUDGE_DIR = REPO_ROOT / "results" / "llm_judge_validation"
 
 # --- 1. CONFIGURATION ---
 
@@ -14,13 +19,13 @@ from sklearn.metrics import accuracy_score, confusion_matrix, classification_rep
 COT_GENERATOR_TAG = "gemma:2b"
 
 # Our locally saved static classifier
-STATIC_CLASSIFIER_PATH = "./local_classifier"
+STATIC_CLASSIFIER_PATH = REPO_ROOT / "local_classifier"
 
 # Dataset paths
-MALICIOUS_CSV = "evaluation_matrix_ollama_results.csv" # Source of malicious prompts
-BENIGN_DATASET_PATH = "./local_datasets/deepset_prompt-injections" # Source of benign prompts
+MALICIOUS_CSV = LLM_JUDGE_DIR / "evaluation_matrix_ollama_results.csv" # Source of malicious prompts
+BENIGN_DATASET_PATH = REPO_ROOT / "local_datasets" / "deepset_prompt-injections" # Source of benign prompts
 
-OUTPUT_CSV = "prompt_vs_prompt_plus_cot_FAST_results.csv"
+OUTPUT_CSV = PROMPT_ONLY_DIR / "prompt_vs_prompt_plus_cot_FAST_results.csv"
 
 # Number of samples per class for a balanced dataset
 # REDUCED TO 150 for a ~2-2.5 hour run

@@ -3,17 +3,21 @@ from transformers import pipeline
 from tqdm import tqdm
 import os
 import sys
+from pathlib import Path
+
+REPO_ROOT = Path(__file__).resolve().parents[2]
+PROMPT_ONLY_DIR = REPO_ROOT / "results" / "prompt_only_failure"
 
 # --- 1. CONFIGURATION ---
 
 # Input CSV with prompts and pre-generated CoTs
-INPUT_CSV = "cot_evaluation_results.csv" 
+INPUT_CSV = PROMPT_ONLY_DIR / "cot_evaluation_results.csv"
 
 # Our locally saved static classifier
-STATIC_CLASSIFIER_PATH = "./local_classifier"
+STATIC_CLASSIFIER_PATH = REPO_ROOT / "local_classifier"
 
 # Output file for detailed results
-OUTPUT_CSV = "prompt_plus_cot_results.csv"
+OUTPUT_CSV = PROMPT_ONLY_DIR / "prompt_plus_cot_results.csv"
 
 # Separator between prompt and CoT
 SEPARATOR = "\n\n---\nCoT Analysis:\n"

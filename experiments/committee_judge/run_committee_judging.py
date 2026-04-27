@@ -3,6 +3,11 @@ import ollama
 from tqdm import tqdm
 import os
 import sys
+from pathlib import Path
+
+REPO_ROOT = Path(__file__).resolve().parents[2]
+RESULTS_COMMITTEE_DIR = REPO_ROOT / "results" / "committee"
+RESULTS_LLM_JUDGE_DIR = REPO_ROOT / "results" / "llm_judge_validation"
 
 # --- 1. CONFIGURATION ---
 
@@ -13,9 +18,9 @@ JUDGES = {
 }
 
 # The clean, verified input file from Phase 1
-INPUT_CSV = "clean_committee_generations.csv" 
+INPUT_CSV = RESULTS_LLM_JUDGE_DIR / "committee_generations_balanced_v3.csv"
 # The final output file for Phase 3
-OUTPUT_CSV = "committee_judged_results.csv" 
+OUTPUT_CSV = RESULTS_COMMITTEE_DIR / "committee_judged_results.csv"
 
 # The metaprompt for our judges
 JUDGE_METAPROMPT = """

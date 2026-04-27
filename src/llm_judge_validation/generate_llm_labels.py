@@ -1,8 +1,11 @@
 import pandas as pd
 import requests
 from tqdm import tqdm
+from pathlib import Path
 
-df = pd.read_csv("final_training_dataset_3000_clean.csv")
+REPO_ROOT = Path(__file__).resolve().parents[2]
+SCALED_DIR = REPO_ROOT / "data" / "scaled_datasets"
+df = pd.read_csv(SCALED_DIR / "final_training_dataset_3000_clean.csv")
 
 OLLAMA_URL = "http://localhost:11434/api/generate"
 
@@ -62,4 +65,4 @@ for p, r in tqdm(zip(df["prompt"], df["response"]), total=len(df)):
 
 df["llm_label"] = labels
 
-df.to_csv("dataset_with_llm_labels.csv", index=False)
+df.to_csv(SCALED_DIR / "dataset_with_llm_labels.csv", index=False)

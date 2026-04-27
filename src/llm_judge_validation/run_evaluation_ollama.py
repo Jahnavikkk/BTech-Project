@@ -6,7 +6,12 @@ from tqdm import tqdm
 import random
 import os
 from datasets import load_dataset ,load_from_disk
+from pathlib import Path
 # --- 1. CONFIGURATION (UPDATED TO USE ONLY AVAILABLE MODELS) ---
+
+REPO_ROOT = Path(__file__).resolve().parents[2]
+RESULTS_DIR = REPO_ROOT / "results" / "llm_judge_validation"
+RESULTS_DIR.mkdir(parents=True, exist_ok=True)
 
 # Ollama model tags for the models you already have
 VICTIM_MODELS = {
@@ -17,7 +22,7 @@ VICTIM_MODELS = {
     "gemma3-27b": "gemma3:27b" 
 }
 
-STATIC_CLASSIFIER_MODEL = "./local_classifier"
+STATIC_CLASSIFIER_MODEL = str(REPO_ROOT / "local_classifier")
 # The judge will now also be an Ollama model
 JUDGE_MODEL_TAG = "gemma3:27b" 
 
@@ -28,7 +33,7 @@ DATASETS_CONFIG = [
     {"name": "llm-attacks/AdvBench", "split": "train", "text_col": "goal", "label_col": "target"}
 ]
 SAMPLES_PER_DATASET = 200
-OUTPUT_CSV_FILE = "evaluation_matrix_ollama_results.csv"
+OUTPUT_CSV_FILE = RESULTS_DIR / "evaluation_matrix_ollama_results.csv"
 
 # The metaprompt for our LLM Judge (no changes here)
 JUDGE_METAPROMPT = """
@@ -58,7 +63,7 @@ def load_malicious_prompts():
     - AdvBench is loaded from the manually uploaded .arrow file.
     """
     all_prompts = []
-    SAVE_DIR = "./local_datasets" # Directory for the first two datasets
+    SAVE_DIR = REPO_ROOT / "local_datasets" # Directory for the first two datasets
     
     # Load the first two datasets from their saved directories
     configs_from_disk = [
@@ -84,7 +89,7 @@ def load_malicious_prompts():
     try:
         print("Loading AdvBench from local .arrow file...")
         advbench_config = {"name": "llm-attacks/AdvBench", "text_col": "prompt"} # CORRECTED
-        advbench_file = "data-00000-of-00001.arrow" 
+        advbench_file = str(REPO_ROOT / "data-00000-of-00001.arrow")
         
         # Load the dataset directly from the arrow file
         dataset = load_dataset("arrow", data_files={'train': advbench_file})['train']

@@ -4,6 +4,11 @@ from transformers import pipeline
 from tqdm import tqdm
 import os
 import sys
+from pathlib import Path
+
+REPO_ROOT = Path(__file__).resolve().parents[2]
+PROMPT_ONLY_DIR = REPO_ROOT / "results" / "prompt_only_failure"
+LLM_JUDGE_DIR = REPO_ROOT / "results" / "llm_judge_validation"
 
 # --- 1. CONFIGURATION ---
 
@@ -12,11 +17,11 @@ WEAK_MODEL_TAG = "tinydolphin:latest"
 STRONG_MODEL_TAG = "gemma3:27b"
 
 # Our locally saved static classifier
-STATIC_CLASSIFIER_PATH = "./local_classifier"
+STATIC_CLASSIFIER_PATH = REPO_ROOT / "local_classifier"
 
 # The "golden ticket" dataset
-RESULTS_CSV = "evaluation_matrix_ollama_results.csv"
-OUTPUT_CSV = "cot_evaluation_results.csv"
+RESULTS_CSV = LLM_JUDGE_DIR / "evaluation_matrix_ollama_results.csv"
+OUTPUT_CSV = PROMPT_ONLY_DIR / "cot_evaluation_results.csv"
 
 # The metaprompt to extract only the CoT
 COT_METAPROMPT_TEMPLATE = """
