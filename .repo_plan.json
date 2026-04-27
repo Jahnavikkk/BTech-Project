@@ -1,0 +1,1158 @@
+[
+  {
+    "file": ".csv_summary.json",
+    "purpose": "Serialized artifact/metadata file.",
+    "importance": "important",
+    "target": "report/appendix/",
+    "duplicate_with": [],
+    "safe_delete": true
+  },
+  {
+    "file": ".py_summary.json",
+    "purpose": "Serialized artifact/metadata file.",
+    "importance": "important",
+    "target": "report/appendix/",
+    "duplicate_with": [],
+    "safe_delete": true
+  },
+  {
+    "file": ".repo_audit_meta.json",
+    "purpose": "Serialized artifact/metadata file.",
+    "importance": "important",
+    "target": "report/appendix/",
+    "duplicate_with": [],
+    "safe_delete": true
+  },
+  {
+    "file": "a2_self_correction_deberta.log",
+    "purpose": "Run log output captured from script execution.",
+    "importance": "redundant",
+    "target": "results/logs/",
+    "duplicate_with": [],
+    "safe_delete": true
+  },
+  {
+    "file": "a4_large_judge_gemma27b.py",
+    "purpose": "LLM-judge generation/evaluation script.",
+    "importance": "important",
+    "target": "src/02_llm_judge/",
+    "duplicate_with": [],
+    "safe_delete": false
+  },
+  {
+    "file": "a4_output.log",
+    "purpose": "Run log output captured from script execution.",
+    "importance": "redundant",
+    "target": "results/logs/",
+    "duplicate_with": [],
+    "safe_delete": true
+  },
+  {
+    "file": "a4_pipeline_results.csv",
+    "purpose": "Experiment output table (metrics/predictions).",
+    "importance": "important",
+    "target": "results/llm_judge/",
+    "duplicate_with": [],
+    "safe_delete": false
+  },
+  {
+    "file": "a4_small_cot_gemma2b.py",
+    "purpose": "LLM-judge generation/evaluation script.",
+    "importance": "important",
+    "target": "src/02_llm_judge/",
+    "duplicate_with": [],
+    "safe_delete": false
+  },
+  {
+    "file": "advbench_cot.log",
+    "purpose": "Run log output captured from script execution.",
+    "importance": "redundant",
+    "target": "results/logs/",
+    "duplicate_with": [],
+    "safe_delete": true
+  },
+  {
+    "file": "agreement_check.py",
+    "purpose": "Analysis or ad-hoc experiment utility script.",
+    "importance": "important",
+    "target": "experiments/",
+    "duplicate_with": [],
+    "safe_delete": false
+  },
+  {
+    "file": "agreement_llm_vs_human.py",
+    "purpose": "LLM-judge generation/evaluation script.",
+    "importance": "important",
+    "target": "src/02_llm_judge/",
+    "duplicate_with": [],
+    "safe_delete": false
+  },
+  {
+    "file": "analyze_committee_results.py",
+    "purpose": "LLM-judge generation/evaluation script.",
+    "importance": "important",
+    "target": "experiments/",
+    "duplicate_with": [],
+    "safe_delete": false
+  },
+  {
+    "file": "analyze_correction_results.py",
+    "purpose": "Analysis or ad-hoc experiment utility script.",
+    "importance": "important",
+    "target": "experiments/",
+    "duplicate_with": [],
+    "safe_delete": false
+  },
+  {
+    "file": "analyze_results.py",
+    "purpose": "Analysis or ad-hoc experiment utility script.",
+    "importance": "important",
+    "target": "experiments/",
+    "duplicate_with": [],
+    "safe_delete": false
+  },
+  {
+    "file": "analyze_spectral_data.py",
+    "purpose": "LLM-judge generation/evaluation script.",
+    "importance": "important",
+    "target": "src/02_llm_judge/",
+    "duplicate_with": [],
+    "safe_delete": false
+  },
+  {
+    "file": "annotation_disagreements.csv",
+    "purpose": "Human-annotation dataset or agreement artifact.",
+    "importance": "important",
+    "target": "data/human_labels/",
+    "duplicate_with": [],
+    "safe_delete": false
+  },
+  {
+    "file": "annotation_master_3000.csv",
+    "purpose": "Human-annotation dataset or agreement artifact.",
+    "importance": "important",
+    "target": "data/human_labels/",
+    "duplicate_with": [],
+    "safe_delete": false
+  },
+  {
+    "file": "annotations_combined.csv",
+    "purpose": "Human-annotation dataset or agreement artifact.",
+    "importance": "important",
+    "target": "data/human_labels/",
+    "duplicate_with": [],
+    "safe_delete": false
+  },
+  {
+    "file": "annotator_set_1_A.csv",
+    "purpose": "Human-annotation dataset or agreement artifact.",
+    "importance": "important",
+    "target": "data/human_labels/",
+    "duplicate_with": [
+      "annotator_set_1_B.csv"
+    ],
+    "safe_delete": false
+  },
+  {
+    "file": "annotator_set_1_A_annotated.csv",
+    "purpose": "Human-annotation dataset or agreement artifact.",
+    "importance": "important",
+    "target": "data/human_labels/",
+    "duplicate_with": [],
+    "safe_delete": false
+  },
+  {
+    "file": "annotator_set_1_B.csv",
+    "purpose": "Human-annotation dataset or agreement artifact.",
+    "importance": "redundant",
+    "target": "data/human_labels/",
+    "duplicate_with": [
+      "annotator_set_1_A.csv"
+    ],
+    "safe_delete": true
+  },
+  {
+    "file": "annotator_set_1_B_annotated.csv",
+    "purpose": "Human-annotation dataset or agreement artifact.",
+    "importance": "important",
+    "target": "data/human_labels/",
+    "duplicate_with": [],
+    "safe_delete": false
+  },
+  {
+    "file": "annotator_set_2_A.csv",
+    "purpose": "Human-annotation dataset or agreement artifact.",
+    "importance": "important",
+    "target": "data/human_labels/",
+    "duplicate_with": [
+      "annotator_set_2_B.csv"
+    ],
+    "safe_delete": false
+  },
+  {
+    "file": "annotator_set_2_A_annotated.csv",
+    "purpose": "Human-annotation dataset or agreement artifact.",
+    "importance": "important",
+    "target": "data/human_labels/",
+    "duplicate_with": [],
+    "safe_delete": false
+  },
+  {
+    "file": "annotator_set_2_B.csv",
+    "purpose": "Human-annotation dataset or agreement artifact.",
+    "importance": "redundant",
+    "target": "data/human_labels/",
+    "duplicate_with": [
+      "annotator_set_2_A.csv"
+    ],
+    "safe_delete": true
+  },
+  {
+    "file": "annotator_set_2_B_annotated.csv",
+    "purpose": "Human-annotation dataset or agreement artifact.",
+    "importance": "important",
+    "target": "data/human_labels/",
+    "duplicate_with": [],
+    "safe_delete": false
+  },
+  {
+    "file": "annotator_set_3_A.csv",
+    "purpose": "Human-annotation dataset or agreement artifact.",
+    "importance": "important",
+    "target": "data/human_labels/",
+    "duplicate_with": [
+      "annotator_set_3_B.csv"
+    ],
+    "safe_delete": false
+  },
+  {
+    "file": "annotator_set_3_A_annotated.csv",
+    "purpose": "Human-annotation dataset or agreement artifact.",
+    "importance": "important",
+    "target": "data/human_labels/",
+    "duplicate_with": [],
+    "safe_delete": false
+  },
+  {
+    "file": "annotator_set_3_B.csv",
+    "purpose": "Human-annotation dataset or agreement artifact.",
+    "importance": "redundant",
+    "target": "data/human_labels/",
+    "duplicate_with": [
+      "annotator_set_3_A.csv"
+    ],
+    "safe_delete": true
+  },
+  {
+    "file": "annotator_set_3_B_annotated.csv",
+    "purpose": "Human-annotation dataset or agreement artifact.",
+    "importance": "important",
+    "target": "data/human_labels/",
+    "duplicate_with": [],
+    "safe_delete": false
+  },
+  {
+    "file": "approach_2_cot.py",
+    "purpose": "LLM-judge generation/evaluation script.",
+    "importance": "important",
+    "target": "src/02_llm_judge/",
+    "duplicate_with": [],
+    "safe_delete": false
+  },
+  {
+    "file": "approach_3_gemma.py",
+    "purpose": "Classifier training or inference experiment script.",
+    "importance": "important",
+    "target": "src/04_classifier_finetune/",
+    "duplicate_with": [],
+    "safe_delete": false
+  },
+  {
+    "file": "approach_3_gemma_upd.py",
+    "purpose": "Classifier training or inference experiment script.",
+    "importance": "important",
+    "target": "src/04_classifier_finetune/",
+    "duplicate_with": [],
+    "safe_delete": false
+  },
+  {
+    "file": "approach_3_llm.py",
+    "purpose": "LLM-judge generation/evaluation script.",
+    "importance": "important",
+    "target": "src/02_llm_judge/",
+    "duplicate_with": [],
+    "safe_delete": false
+  },
+  {
+    "file": "artifacts/cot/advbench_prompt_cot.json",
+    "purpose": "Stored chain-of-thought/prompt artifacts from judge experiments.",
+    "importance": "optional",
+    "target": "results/llm_judge/cot_artifacts/",
+    "duplicate_with": [],
+    "safe_delete": false
+  },
+  {
+    "file": "artifacts/cot/deepset_prompt-injections_cot.json",
+    "purpose": "Stored chain-of-thought/prompt artifacts from judge experiments.",
+    "importance": "optional",
+    "target": "results/llm_judge/cot_artifacts/",
+    "duplicate_with": [],
+    "safe_delete": false
+  },
+  {
+    "file": "artifacts/cot/xTRam1_safe-guard-prompt-injection_cot.json",
+    "purpose": "Stored chain-of-thought/prompt artifacts from judge experiments.",
+    "importance": "optional",
+    "target": "results/llm_judge/cot_artifacts/",
+    "duplicate_with": [],
+    "safe_delete": false
+  },
+  {
+    "file": "balanced_dataset.csv",
+    "purpose": "Core dataset used for scaling/training.",
+    "importance": "important",
+    "target": "data/scaled_dataset/",
+    "duplicate_with": [],
+    "safe_delete": false
+  },
+  {
+    "file": "check_data_integrity.py",
+    "purpose": "Dataset cleaning/scaling preparation script.",
+    "importance": "important",
+    "target": "src/03_scaled_dataset/",
+    "duplicate_with": [],
+    "safe_delete": false
+  },
+  {
+    "file": "check_final_dataset.py",
+    "purpose": "Dataset cleaning/scaling preparation script.",
+    "importance": "important",
+    "target": "src/03_scaled_dataset/",
+    "duplicate_with": [],
+    "safe_delete": false
+  },
+  {
+    "file": "clean_committee_generations.csv",
+    "purpose": "Experiment output table (metrics/predictions).",
+    "importance": "redundant",
+    "target": "results/llm_judge/",
+    "duplicate_with": [
+      "committee_generations_balanced_v3.csv"
+    ],
+    "safe_delete": true
+  },
+  {
+    "file": "clean_deepset_english.py",
+    "purpose": "Dataset cleaning/scaling preparation script.",
+    "importance": "important",
+    "target": "src/03_scaled_dataset/",
+    "duplicate_with": [],
+    "safe_delete": false
+  },
+  {
+    "file": "clean_deepset_langdetect.py",
+    "purpose": "Dataset cleaning/scaling preparation script.",
+    "importance": "important",
+    "target": "src/03_scaled_dataset/",
+    "duplicate_with": [],
+    "safe_delete": false
+  },
+  {
+    "file": "combine_annotations.py",
+    "purpose": "Human-label workflow script (split/merge/resolve labels).",
+    "importance": "important",
+    "target": "src/01_human_labels/",
+    "duplicate_with": [],
+    "safe_delete": false
+  },
+  {
+    "file": "committee_generations.csv",
+    "purpose": "Experiment output table (metrics/predictions).",
+    "importance": "important",
+    "target": "results/llm_judge/",
+    "duplicate_with": [],
+    "safe_delete": false
+  },
+  {
+    "file": "committee_generations_balanced_v2.csv",
+    "purpose": "Experiment output table (metrics/predictions).",
+    "importance": "important",
+    "target": "results/llm_judge/",
+    "duplicate_with": [],
+    "safe_delete": false
+  },
+  {
+    "file": "committee_generations_balanced_v3.csv",
+    "purpose": "Experiment output table (metrics/predictions).",
+    "importance": "important",
+    "target": "results/llm_judge/",
+    "duplicate_with": [
+      "clean_committee_generations.csv"
+    ],
+    "safe_delete": false
+  },
+  {
+    "file": "committee_judged_results.csv",
+    "purpose": "Experiment output table (metrics/predictions).",
+    "importance": "important",
+    "target": "results/llm_judge/",
+    "duplicate_with": [],
+    "safe_delete": false
+  },
+  {
+    "file": "committee_judged_results_balanced_v2.csv",
+    "purpose": "Experiment output table (metrics/predictions).",
+    "importance": "important",
+    "target": "results/llm_judge/",
+    "duplicate_with": [],
+    "safe_delete": false
+  },
+  {
+    "file": "cot_evaluation_results.csv",
+    "purpose": "Experiment output table (metrics/predictions).",
+    "importance": "important",
+    "target": "results/llm_judge/",
+    "duplicate_with": [],
+    "safe_delete": false
+  },
+  {
+    "file": "cot_flip.log",
+    "purpose": "Run log output captured from script execution.",
+    "importance": "redundant",
+    "target": "results/logs/",
+    "duplicate_with": [],
+    "safe_delete": true
+  },
+  {
+    "file": "cot_judge.log",
+    "purpose": "Run log output captured from script execution.",
+    "importance": "redundant",
+    "target": "results/logs/",
+    "duplicate_with": [],
+    "safe_delete": true
+  },
+  {
+    "file": "cot_output.log",
+    "purpose": "Run log output captured from script execution.",
+    "importance": "redundant",
+    "target": "results/logs/",
+    "duplicate_with": [],
+    "safe_delete": true
+  },
+  {
+    "file": "dataset_with_behavior_labels.csv",
+    "purpose": "Experiment output table (metrics/predictions).",
+    "importance": "important",
+    "target": "results/llm_judge/",
+    "duplicate_with": [],
+    "safe_delete": false
+  },
+  {
+    "file": "dataset_with_llm_labels.csv",
+    "purpose": "Experiment output table (metrics/predictions).",
+    "importance": "important",
+    "target": "results/llm_judge/",
+    "duplicate_with": [],
+    "safe_delete": false
+  },
+  {
+    "file": "deepset_remaining.log",
+    "purpose": "Run log output captured from script execution.",
+    "importance": "redundant",
+    "target": "results/logs/",
+    "duplicate_with": [],
+    "safe_delete": true
+  },
+  {
+    "file": "download_classifier.py",
+    "purpose": "Project utility script.",
+    "importance": "important",
+    "target": "src/04_classifier_finetune/",
+    "duplicate_with": [],
+    "safe_delete": false
+  },
+  {
+    "file": "download_datasets.py",
+    "purpose": "Project utility script.",
+    "importance": "important",
+    "target": "src/utils/",
+    "duplicate_with": [],
+    "safe_delete": false
+  },
+  {
+    "file": "download_model.py",
+    "purpose": "Project utility script.",
+    "importance": "important",
+    "target": "src/04_classifier_finetune/",
+    "duplicate_with": [],
+    "safe_delete": false
+  },
+  {
+    "file": "eval_all_models.py",
+    "purpose": "Analysis or ad-hoc experiment utility script.",
+    "importance": "important",
+    "target": "experiments/",
+    "duplicate_with": [],
+    "safe_delete": false
+  },
+  {
+    "file": "eval_qualifire.py",
+    "purpose": "Analysis or ad-hoc experiment utility script.",
+    "importance": "important",
+    "target": "experiments/",
+    "duplicate_with": [],
+    "safe_delete": false
+  },
+  {
+    "file": "evaluation_matrix_ollama_results.csv",
+    "purpose": "Experiment output table (metrics/predictions).",
+    "importance": "important",
+    "target": "results/llm_judge/",
+    "duplicate_with": [],
+    "safe_delete": false
+  },
+  {
+    "file": "execution_matrix.log",
+    "purpose": "Run log output captured from script execution.",
+    "importance": "redundant",
+    "target": "results/logs/",
+    "duplicate_with": [],
+    "safe_delete": true
+  },
+  {
+    "file": "execution_matrix_1000.csv",
+    "purpose": "Experiment output table (metrics/predictions).",
+    "importance": "important",
+    "target": "results/llm_judge/",
+    "duplicate_with": [],
+    "safe_delete": false
+  },
+  {
+    "file": "execution_matrix_cleaned.csv",
+    "purpose": "Experiment output table (metrics/predictions).",
+    "importance": "important",
+    "target": "results/llm_judge/",
+    "duplicate_with": [],
+    "safe_delete": false
+  },
+  {
+    "file": "execution_matrix_final.csv",
+    "purpose": "Experiment output table (metrics/predictions).",
+    "importance": "important",
+    "target": "results/llm_judge/",
+    "duplicate_with": [],
+    "safe_delete": false
+  },
+  {
+    "file": "exp2_behavior_model.py",
+    "purpose": "Classifier training or inference experiment script.",
+    "importance": "important",
+    "target": "src/04_classifier_finetune/",
+    "duplicate_with": [],
+    "safe_delete": false
+  },
+  {
+    "file": "fill_final_dataset.py",
+    "purpose": "Dataset cleaning/scaling preparation script.",
+    "importance": "important",
+    "target": "src/03_scaled_dataset/",
+    "duplicate_with": [],
+    "safe_delete": false
+  },
+  {
+    "file": "final_dataset_3000_ollama.csv",
+    "purpose": "Core dataset used for scaling/training.",
+    "importance": "important",
+    "target": "data/scaled_dataset/",
+    "duplicate_with": [],
+    "safe_delete": false
+  },
+  {
+    "file": "final_large_dataset.csv",
+    "purpose": "Core dataset used for scaling/training.",
+    "importance": "important",
+    "target": "data/scaled_dataset/",
+    "duplicate_with": [],
+    "safe_delete": false
+  },
+  {
+    "file": "final_model_comparison.csv",
+    "purpose": "Final model comparison output table.",
+    "importance": "important",
+    "target": "results/final_comparison/",
+    "duplicate_with": [],
+    "safe_delete": false
+  },
+  {
+    "file": "final_train_deberta.py",
+    "purpose": "Classifier training or inference experiment script.",
+    "importance": "important",
+    "target": "src/04_classifier_finetune/",
+    "duplicate_with": [],
+    "safe_delete": false
+  },
+  {
+    "file": "final_training_dataset.csv",
+    "purpose": "Core dataset used for scaling/training.",
+    "importance": "important",
+    "target": "data/scaled_dataset/",
+    "duplicate_with": [],
+    "safe_delete": false
+  },
+  {
+    "file": "final_training_dataset_3000_clean.csv",
+    "purpose": "Core dataset used for scaling/training.",
+    "importance": "important",
+    "target": "data/scaled_dataset/",
+    "duplicate_with": [],
+    "safe_delete": false
+  },
+  {
+    "file": "finetune_cot.log",
+    "purpose": "Run log output captured from script execution.",
+    "importance": "redundant",
+    "target": "results/logs/",
+    "duplicate_with": [],
+    "safe_delete": true
+  },
+  {
+    "file": "finetune_promptguard.py",
+    "purpose": "Classifier training or inference experiment script.",
+    "importance": "important",
+    "target": "src/04_classifier_finetune/",
+    "duplicate_with": [],
+    "safe_delete": false
+  },
+  {
+    "file": "finetune_promptguard_9k.py",
+    "purpose": "Classifier training or inference experiment script.",
+    "importance": "important",
+    "target": "src/04_classifier_finetune/",
+    "duplicate_with": [],
+    "safe_delete": false
+  },
+  {
+    "file": "flatten_for_annotation.py",
+    "purpose": "Human-label workflow script (split/merge/resolve labels).",
+    "importance": "important",
+    "target": "src/01_human_labels/",
+    "duplicate_with": [],
+    "safe_delete": false
+  },
+  {
+    "file": "full_pipeline.py",
+    "purpose": "Dataset cleaning/scaling preparation script.",
+    "importance": "important",
+    "target": "src/03_scaled_dataset/",
+    "duplicate_with": [],
+    "safe_delete": false
+  },
+  {
+    "file": "generate_advbench_cot.py",
+    "purpose": "LLM-judge generation/evaluation script.",
+    "importance": "important",
+    "target": "src/02_llm_judge/",
+    "duplicate_with": [],
+    "safe_delete": false
+  },
+  {
+    "file": "generate_behavior_labels.py",
+    "purpose": "Dataset cleaning/scaling preparation script.",
+    "importance": "important",
+    "target": "src/03_scaled_dataset/",
+    "duplicate_with": [],
+    "safe_delete": false
+  },
+  {
+    "file": "generate_cot_ollama.py",
+    "purpose": "LLM-judge generation/evaluation script.",
+    "importance": "important",
+    "target": "src/02_llm_judge/",
+    "duplicate_with": [],
+    "safe_delete": false
+  },
+  {
+    "file": "generate_llm_labels.py",
+    "purpose": "LLM-judge generation/evaluation script.",
+    "importance": "important",
+    "target": "src/02_llm_judge/",
+    "duplicate_with": [],
+    "safe_delete": false
+  },
+  {
+    "file": "generated_dataset.csv",
+    "purpose": "Core dataset used for scaling/training.",
+    "importance": "important",
+    "target": "data/scaled_dataset/",
+    "duplicate_with": [
+      "generated_dataset_backup.csv"
+    ],
+    "safe_delete": false
+  },
+  {
+    "file": "generated_dataset_backup.csv",
+    "purpose": "Core dataset used for scaling/training.",
+    "importance": "redundant",
+    "target": "data/scaled_dataset/",
+    "duplicate_with": [
+      "generated_dataset.csv"
+    ],
+    "safe_delete": true
+  },
+  {
+    "file": "generation_output.log",
+    "purpose": "Run log output captured from script execution.",
+    "importance": "redundant",
+    "target": "results/logs/",
+    "duplicate_with": [],
+    "safe_delete": true
+  },
+  {
+    "file": "inspect_advbench.py",
+    "purpose": "Analysis or ad-hoc experiment utility script.",
+    "importance": "important",
+    "target": "experiments/",
+    "duplicate_with": [],
+    "safe_delete": false
+  },
+  {
+    "file": "inspect_arena.py",
+    "purpose": "Analysis or ad-hoc experiment utility script.",
+    "importance": "important",
+    "target": "experiments/",
+    "duplicate_with": [],
+    "safe_delete": false
+  },
+  {
+    "file": "judging_output.log",
+    "purpose": "Run log output captured from script execution.",
+    "importance": "redundant",
+    "target": "results/logs/",
+    "duplicate_with": [],
+    "safe_delete": true
+  },
+  {
+    "file": "llm_judge_prompt_plus_cot.log",
+    "purpose": "Run log output captured from script execution.",
+    "importance": "redundant",
+    "target": "results/logs/",
+    "duplicate_with": [],
+    "safe_delete": true
+  },
+  {
+    "file": "llm_judge_prompt_plus_cot_results.csv",
+    "purpose": "Experiment output table (metrics/predictions).",
+    "importance": "important",
+    "target": "results/llm_judge/",
+    "duplicate_with": [],
+    "safe_delete": false
+  },
+  {
+    "file": "llm_judge_prompt_vs_prompt_cot.csv",
+    "purpose": "Experiment output table (metrics/predictions).",
+    "importance": "important",
+    "target": "results/llm_judge/",
+    "duplicate_with": [],
+    "safe_delete": false
+  },
+  {
+    "file": "llmdge_prompt_plus_cot.log",
+    "purpose": "Run log output captured from script execution.",
+    "importance": "redundant",
+    "target": "results/logs/",
+    "duplicate_with": [],
+    "safe_delete": true
+  },
+  {
+    "file": "ollama_output.log",
+    "purpose": "Run log output captured from script execution.",
+    "importance": "redundant",
+    "target": "results/logs/",
+    "duplicate_with": [],
+    "safe_delete": true
+  },
+  {
+    "file": "omt_dataset_analysis.py",
+    "purpose": "Project utility script.",
+    "importance": "important",
+    "target": "src/utils/",
+    "duplicate_with": [],
+    "safe_delete": false
+  },
+  {
+    "file": "omt_final_dataset_eda.py",
+    "purpose": "Project utility script.",
+    "importance": "important",
+    "target": "src/utils/",
+    "duplicate_with": [],
+    "safe_delete": false
+  },
+  {
+    "file": "omt_finetuneattempt1.py",
+    "purpose": "Classifier training or inference experiment script.",
+    "importance": "important",
+    "target": "src/04_classifier_finetune/",
+    "duplicate_with": [],
+    "safe_delete": false
+  },
+  {
+    "file": "output.log",
+    "purpose": "Run log output captured from script execution.",
+    "importance": "redundant",
+    "target": "results/logs/",
+    "duplicate_with": [],
+    "safe_delete": true
+  },
+  {
+    "file": "plot.py",
+    "purpose": "Analysis or ad-hoc experiment utility script.",
+    "importance": "important",
+    "target": "experiments/",
+    "duplicate_with": [],
+    "safe_delete": false
+  },
+  {
+    "file": "prompt_plus_cot_results.csv",
+    "purpose": "Experiment output table (metrics/predictions).",
+    "importance": "important",
+    "target": "results/llm_judge/",
+    "duplicate_with": [],
+    "safe_delete": false
+  },
+  {
+    "file": "prompt_vs_cot_FAST_output.log",
+    "purpose": "Run log output captured from script execution.",
+    "importance": "redundant",
+    "target": "results/logs/",
+    "duplicate_with": [],
+    "safe_delete": true
+  },
+  {
+    "file": "prompt_vs_prompt_plus_cot_FAST_results.csv",
+    "purpose": "Experiment output table (metrics/predictions).",
+    "importance": "important",
+    "target": "results/llm_judge/",
+    "duplicate_with": [],
+    "safe_delete": false
+  },
+  {
+    "file": "refill_deepset_langdetect.py",
+    "purpose": "Project utility script.",
+    "importance": "important",
+    "target": "src/utils/",
+    "duplicate_with": [],
+    "safe_delete": false
+  },
+  {
+    "file": "refill_lang.log",
+    "purpose": "Run log output captured from script execution.",
+    "importance": "redundant",
+    "target": "results/logs/",
+    "duplicate_with": [],
+    "safe_delete": true
+  },
+  {
+    "file": "run_a2_self_correction_deberta.py",
+    "purpose": "LLM-judge generation/evaluation script.",
+    "importance": "important",
+    "target": "src/02_llm_judge/",
+    "duplicate_with": [],
+    "safe_delete": false
+  },
+  {
+    "file": "run_a4_pipeline.py",
+    "purpose": "Analysis or ad-hoc experiment utility script.",
+    "importance": "important",
+    "target": "experiments/",
+    "duplicate_with": [],
+    "safe_delete": false
+  },
+  {
+    "file": "run_baseline_deberta.py",
+    "purpose": "Classifier training or inference experiment script.",
+    "importance": "important",
+    "target": "src/04_classifier_finetune/",
+    "duplicate_with": [],
+    "safe_delete": false
+  },
+  {
+    "file": "run_committee_analysis.py",
+    "purpose": "LLM-judge generation/evaluation script.",
+    "importance": "important",
+    "target": "experiments/",
+    "duplicate_with": [],
+    "safe_delete": false
+  },
+  {
+    "file": "run_committee_generation.py",
+    "purpose": "LLM-judge generation/evaluation script.",
+    "importance": "important",
+    "target": "src/utils/",
+    "duplicate_with": [],
+    "safe_delete": false
+  },
+  {
+    "file": "run_committee_judging.py",
+    "purpose": "LLM-judge generation/evaluation script.",
+    "importance": "important",
+    "target": "src/02_llm_judge/",
+    "duplicate_with": [],
+    "safe_delete": false
+  },
+  {
+    "file": "run_cot_evaluation.py",
+    "purpose": "LLM-judge generation/evaluation script.",
+    "importance": "important",
+    "target": "src/02_llm_judge/",
+    "duplicate_with": [],
+    "safe_delete": false
+  },
+  {
+    "file": "run_deepset_remaining.py",
+    "purpose": "Dataset cleaning/scaling preparation script.",
+    "importance": "important",
+    "target": "src/03_scaled_dataset/",
+    "duplicate_with": [],
+    "safe_delete": false
+  },
+  {
+    "file": "run_evaluation_ollama.py",
+    "purpose": "LLM-judge generation/evaluation script.",
+    "importance": "important",
+    "target": "src/02_llm_judge/",
+    "duplicate_with": [],
+    "safe_delete": false
+  },
+  {
+    "file": "run_execution_matrix.py",
+    "purpose": "Analysis or ad-hoc experiment utility script.",
+    "importance": "important",
+    "target": "experiments/",
+    "duplicate_with": [],
+    "safe_delete": false
+  },
+  {
+    "file": "run_finetune_prompt_cot.py",
+    "purpose": "LLM-judge generation/evaluation script.",
+    "importance": "important",
+    "target": "src/02_llm_judge/",
+    "duplicate_with": [],
+    "safe_delete": false
+  },
+  {
+    "file": "run_llm_judge_prompt_vs_prompt_cot.py",
+    "purpose": "LLM-judge generation/evaluation script.",
+    "importance": "important",
+    "target": "src/02_llm_judge/",
+    "duplicate_with": [],
+    "safe_delete": false
+  },
+  {
+    "file": "run_prompt+cot_v2.py",
+    "purpose": "LLM-judge generation/evaluation script.",
+    "importance": "important",
+    "target": "src/02_llm_judge/",
+    "duplicate_with": [],
+    "safe_delete": false
+  },
+  {
+    "file": "run_prompt_plus_cot_eval.py",
+    "purpose": "LLM-judge generation/evaluation script.",
+    "importance": "important",
+    "target": "src/02_llm_judge/",
+    "duplicate_with": [],
+    "safe_delete": false
+  },
+  {
+    "file": "run_prompt_vs_prompt_plus_cot_FAST.py",
+    "purpose": "LLM-judge generation/evaluation script.",
+    "importance": "important",
+    "target": "src/02_llm_judge/",
+    "duplicate_with": [],
+    "safe_delete": false
+  },
+  {
+    "file": "run_self_correction_eval.py",
+    "purpose": "LLM-judge generation/evaluation script.",
+    "importance": "important",
+    "target": "src/02_llm_judge/",
+    "duplicate_with": [],
+    "safe_delete": false
+  },
+  {
+    "file": "run_sigir_llm_judge.py",
+    "purpose": "LLM-judge generation/evaluation script.",
+    "importance": "important",
+    "target": "src/02_llm_judge/",
+    "duplicate_with": [],
+    "safe_delete": false
+  },
+  {
+    "file": "run_spectral_interrogation.py",
+    "purpose": "LLM-judge generation/evaluation script.",
+    "importance": "important",
+    "target": "src/02_llm_judge/",
+    "duplicate_with": [],
+    "safe_delete": false
+  },
+  {
+    "file": "sanitycheck.py",
+    "purpose": "Analysis or ad-hoc experiment utility script.",
+    "importance": "redundant",
+    "target": "experiments/",
+    "duplicate_with": [],
+    "safe_delete": true
+  },
+  {
+    "file": "sanitycheck2.py",
+    "purpose": "Analysis or ad-hoc experiment utility script.",
+    "importance": "redundant",
+    "target": "experiments/",
+    "duplicate_with": [],
+    "safe_delete": true
+  },
+  {
+    "file": "sanitycheck3.py",
+    "purpose": "Analysis or ad-hoc experiment utility script.",
+    "importance": "redundant",
+    "target": "experiments/",
+    "duplicate_with": [],
+    "safe_delete": true
+  },
+  {
+    "file": "sanitychek4.py",
+    "purpose": "Analysis or ad-hoc experiment utility script.",
+    "importance": "redundant",
+    "target": "experiments/",
+    "duplicate_with": [],
+    "safe_delete": true
+  },
+  {
+    "file": "self_correction_output.log",
+    "purpose": "Run log output captured from script execution.",
+    "importance": "redundant",
+    "target": "results/logs/",
+    "duplicate_with": [],
+    "safe_delete": true
+  },
+  {
+    "file": "self_correction_results.csv",
+    "purpose": "Experiment output table (metrics/predictions).",
+    "importance": "important",
+    "target": "results/llm_judge/",
+    "duplicate_with": [],
+    "safe_delete": false
+  },
+  {
+    "file": "sigir_deepset_prompt_only.csv",
+    "purpose": "Experiment output table (metrics/predictions).",
+    "importance": "important",
+    "target": "results/llm_judge/",
+    "duplicate_with": [],
+    "safe_delete": false
+  },
+  {
+    "file": "sigir_deepset_prompt_plus_cot.csv",
+    "purpose": "Experiment output table (metrics/predictions).",
+    "importance": "important",
+    "target": "results/llm_judge/",
+    "duplicate_with": [],
+    "safe_delete": false
+  },
+  {
+    "file": "sigir_judge.log",
+    "purpose": "Run log output captured from script execution.",
+    "importance": "redundant",
+    "target": "results/logs/",
+    "duplicate_with": [],
+    "safe_delete": true
+  },
+  {
+    "file": "sigir_xtram_prompt_only.csv",
+    "purpose": "Experiment output table (metrics/predictions).",
+    "importance": "important",
+    "target": "results/llm_judge/",
+    "duplicate_with": [],
+    "safe_delete": false
+  },
+  {
+    "file": "sigir_xtram_prompt_plus_cot.csv",
+    "purpose": "Experiment output table (metrics/predictions).",
+    "importance": "important",
+    "target": "results/llm_judge/",
+    "duplicate_with": [],
+    "safe_delete": false
+  },
+  {
+    "file": "somefix.py",
+    "purpose": "Analysis or ad-hoc experiment utility script.",
+    "importance": "redundant",
+    "target": "experiments/",
+    "duplicate_with": [],
+    "safe_delete": true
+  },
+  {
+    "file": "spectral_data.csv",
+    "purpose": "Experiment output table (metrics/predictions).",
+    "importance": "important",
+    "target": "results/llm_judge/",
+    "duplicate_with": [],
+    "safe_delete": false
+  },
+  {
+    "file": "spectral_gen_output_v2.log",
+    "purpose": "Run log output captured from script execution.",
+    "importance": "redundant",
+    "target": "results/logs/",
+    "duplicate_with": [],
+    "safe_delete": true
+  },
+  {
+    "file": "split_for_annotators.py",
+    "purpose": "Human-label workflow script (split/merge/resolve labels).",
+    "importance": "important",
+    "target": "src/01_human_labels/",
+    "duplicate_with": [],
+    "safe_delete": false
+  },
+  {
+    "file": "test.py",
+    "purpose": "Analysis or ad-hoc experiment utility script.",
+    "importance": "redundant",
+    "target": "experiments/",
+    "duplicate_with": [],
+    "safe_delete": true
+  },
+  {
+    "file": "test_dataset.py",
+    "purpose": "Analysis or ad-hoc experiment utility script.",
+    "importance": "important",
+    "target": "src/04_classifier_finetune/",
+    "duplicate_with": [],
+    "safe_delete": false
+  },
+  {
+    "file": "train_deberta_specific.py",
+    "purpose": "Classifier training or inference experiment script.",
+    "importance": "important",
+    "target": "src/04_classifier_finetune/",
+    "duplicate_with": [],
+    "safe_delete": false
+  },
+  {
+    "file": "wildjailbreak_prompts.csv",
+    "purpose": "Core dataset used for scaling/training.",
+    "importance": "important",
+    "target": "data/scaled_dataset/",
+    "duplicate_with": [],
+    "safe_delete": false
+  },
+  {
+    "file": "withoutcot.py",
+    "purpose": "LLM-judge generation/evaluation script.",
+    "importance": "important",
+    "target": "src/02_llm_judge/",
+    "duplicate_with": [],
+    "safe_delete": false
+  }
+]

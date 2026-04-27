@@ -1,0 +1,23 @@
+`config.hidden_act` is ignored, you should use `config.hidden_activation` instead.
+Gemma's activation function will be set to `gelu_pytorch_tanh`. Please, use
+`config.hidden_activation` if you want to override this behaviour.
+See https://github.com/huggingface/transformers/pull/29402 for more details.
+Loading models...
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:01<00:01,  1.42s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:01<00:00,  1.31it/s]
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+Traceback (most recent call last):
+  File "/workspace/amit/Jahanvi/run_llm_judge_prompt_vs_prompt_cot.py", line 65, in <module>
+    judge_tok, judge_model = load_model(JUDGE_MODEL)
+  File "/workspace/amit/Jahanvi/run_llm_judge_prompt_vs_prompt_cot.py", line 44, in load_model
+    model = AutoModelForCausalLM.from_pretrained(
+  File "/workspace/amit/anaconda3/envs/jahnvi/lib/python3.10/site-packages/transformers/models/auto/auto_factory.py", line 523, in from_pretrained
+    config, kwargs = AutoConfig.from_pretrained(
+  File "/workspace/amit/anaconda3/envs/jahnvi/lib/python3.10/site-packages/transformers/models/auto/configuration_auto.py", line 958, in from_pretrained
+    return config_class.from_dict(config_dict, **unused_kwargs)
+  File "/workspace/amit/anaconda3/envs/jahnvi/lib/python3.10/site-packages/transformers/configuration_utils.py", line 768, in from_dict
+    config = cls(**config_dict)
+  File "/workspace/amit/anaconda3/envs/jahnvi/lib/python3.10/site-packages/transformers/models/llama/configuration_llama.py", line 161, in __init__
+    self._rope_scaling_validation()
+  File "/workspace/amit/anaconda3/envs/jahnvi/lib/python3.10/site-packages/transformers/models/llama/configuration_llama.py", line 182, in _rope_scaling_validation
+    raise ValueError(
+ValueError: `rope_scaling` must be a dictionary with two fields, `type` and `factor`, got {'factor': 8.0, 'low_freq_factor': 1.0, 'high_freq_factor': 4.0, 'original_max_position_embeddings': 8192, 'rope_type': 'llama3'}

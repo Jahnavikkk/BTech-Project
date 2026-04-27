@@ -1,0 +1,296 @@
+{
+  "annotation_file_summaries": [
+    {
+      "file": "annotation_master_3000.csv",
+      "rows": 3000,
+      "cols": 6,
+      "header": [
+        "prompt",
+        "dataset",
+        "dataset_label",
+        "model_name",
+        "model_response",
+        "human_label(benign=0,malicious=1)"
+      ],
+      "content_hash": "83ec1748ede5450b332e6867c3a5c8bc9366ce3ee4c12990c5e636b090af7631"
+    },
+    {
+      "file": "annotator_set_1_A.csv",
+      "rows": 1000,
+      "cols": 6,
+      "header": [
+        "prompt",
+        "dataset",
+        "dataset_label",
+        "model_name",
+        "model_response",
+        "human_label(benign=0,malicious=1)"
+      ],
+      "content_hash": "02592f09bfee519c577e03e32ace80e27d05f4eb70b005923f2d1775e8f8c74c"
+    },
+    {
+      "file": "annotator_set_1_B.csv",
+      "rows": 1000,
+      "cols": 6,
+      "header": [
+        "prompt",
+        "dataset",
+        "dataset_label",
+        "model_name",
+        "model_response",
+        "human_label(benign=0,malicious=1)"
+      ],
+      "content_hash": "02592f09bfee519c577e03e32ace80e27d05f4eb70b005923f2d1775e8f8c74c"
+    },
+    {
+      "file": "annotator_set_1_A_annotated.csv",
+      "rows": 1000,
+      "cols": 6,
+      "header": [
+        "prompt",
+        "dataset",
+        "dataset_label",
+        "model_name",
+        "model_response",
+        "human_label(benign=0,malicious=1)"
+      ],
+      "content_hash": "4edb2afea6f784d04ced2be8533c3446d70cc119ab2d0926b57af4da51301cc0"
+    },
+    {
+      "file": "annotator_set_1_B_annotated.csv",
+      "rows": 1000,
+      "cols": 6,
+      "header": [
+        "prompt",
+        "dataset",
+        "dataset_label",
+        "model_name",
+        "model_response",
+        "human_label(benign=0,malicious=1)"
+      ],
+      "content_hash": "46b26edc28d1453ac1a589b5852e7d20c54f967f9633148094f5e636a538b661"
+    },
+    {
+      "file": "annotator_set_2_A.csv",
+      "rows": 1000,
+      "cols": 6,
+      "header": [
+        "prompt",
+        "dataset",
+        "dataset_label",
+        "model_name",
+        "model_response",
+        "human_label(benign=0,malicious=1)"
+      ],
+      "content_hash": "f165ca0102ab1385f010f387c5cf7f4b38a01dad1fcd431403b059eee0d0b035"
+    },
+    {
+      "file": "annotator_set_2_B.csv",
+      "rows": 1000,
+      "cols": 6,
+      "header": [
+        "prompt",
+        "dataset",
+        "dataset_label",
+        "model_name",
+        "model_response",
+        "human_label(benign=0,malicious=1)"
+      ],
+      "content_hash": "f165ca0102ab1385f010f387c5cf7f4b38a01dad1fcd431403b059eee0d0b035"
+    },
+    {
+      "file": "annotator_set_2_A_annotated.csv",
+      "rows": 1000,
+      "cols": 6,
+      "header": [
+        "prompt",
+        "dataset",
+        "dataset_label",
+        "model_name",
+        "model_response",
+        "human_label(benign=0,malicious=1)"
+      ],
+      "content_hash": "93cb141a1a0b9640e12e4c11a264240e39e76601e7924854cb13e6dad1ca1688"
+    },
+    {
+      "file": "annotator_set_2_B_annotated.csv",
+      "rows": 1000,
+      "cols": 6,
+      "header": [
+        "prompt",
+        "dataset",
+        "dataset_label",
+        "model_name",
+        "model_response",
+        "human_label(benign=0,malicious=1)"
+      ],
+      "content_hash": "0c71547ef1fa2ef1aafbfb00329d3947b93657f4cbd85d757cf73793c406b613"
+    },
+    {
+      "file": "annotator_set_3_A.csv",
+      "rows": 1000,
+      "cols": 6,
+      "header": [
+        "prompt",
+        "dataset",
+        "dataset_label",
+        "model_name",
+        "model_response",
+        "human_label(benign=0,malicious=1)"
+      ],
+      "content_hash": "5b5e5acc439e0b264b48560350ef14ccef667bf164de10463c90105959c13287"
+    },
+    {
+      "file": "annotator_set_3_B.csv",
+      "rows": 1000,
+      "cols": 6,
+      "header": [
+        "prompt",
+        "dataset",
+        "dataset_label",
+        "model_name",
+        "model_response",
+        "human_label(benign=0,malicious=1)"
+      ],
+      "content_hash": "5b5e5acc439e0b264b48560350ef14ccef667bf164de10463c90105959c13287"
+    },
+    {
+      "file": "annotator_set_3_A_annotated.csv",
+      "rows": 1000,
+      "cols": 6,
+      "header": [
+        "prompt",
+        "dataset",
+        "dataset_label",
+        "model_name",
+        "model_response",
+        "human_label(benign=0,malicious=1)"
+      ],
+      "content_hash": "0a5b32a19436890fc8f84e60335c570546d812477833ab0f51afaa416eb504f0"
+    },
+    {
+      "file": "annotator_set_3_B_annotated.csv",
+      "rows": 1000,
+      "cols": 6,
+      "header": [
+        "prompt",
+        "dataset",
+        "dataset_label",
+        "model_name",
+        "model_response",
+        "human_label(benign=0,malicious=1)"
+      ],
+      "content_hash": "28b0067803124300aaed201e39e68500208376735d038862b10b55abdf8b60b2"
+    },
+    {
+      "file": "annotations_combined.csv",
+      "rows": 3000,
+      "cols": 9,
+      "header": [
+        "prompt",
+        "dataset",
+        "dataset_label",
+        "model_name",
+        "model_response",
+        "human_label(benign=0,malicious=1)",
+        "label_A",
+        "label_B",
+        "agree"
+      ],
+      "content_hash": "097719c9bbd6c56aa862a05336a0c749079142589fd13ee5d1b3f441af1c49ef"
+    },
+    {
+      "file": "annotation_disagreements.csv",
+      "rows": 235,
+      "cols": 9,
+      "header": [
+        "prompt",
+        "dataset",
+        "dataset_label",
+        "model_name",
+        "model_response",
+        "human_label(benign=0,malicious=1)",
+        "label_A",
+        "label_B",
+        "agree"
+      ],
+      "content_hash": "754550c80f5e6abccde51422d6a41e40582a2fa2f353efd49db47f3acaf363f4"
+    }
+  ],
+  "pairwise": [
+    {
+      "file_a": "annotator_set_1_A.csv",
+      "file_b": "annotator_set_1_B.csv",
+      "same_header": true,
+      "same_rows": true,
+      "rows_a": 1000,
+      "rows_b": 1000,
+      "row_diff_count": 0
+    },
+    {
+      "file_a": "annotator_set_2_A.csv",
+      "file_b": "annotator_set_2_B.csv",
+      "same_header": true,
+      "same_rows": true,
+      "rows_a": 1000,
+      "rows_b": 1000,
+      "row_diff_count": 0
+    },
+    {
+      "file_a": "annotator_set_3_A.csv",
+      "file_b": "annotator_set_3_B.csv",
+      "same_header": true,
+      "same_rows": true,
+      "rows_a": 1000,
+      "rows_b": 1000,
+      "row_diff_count": 0
+    },
+    {
+      "file_a": "annotator_set_1_A_annotated.csv",
+      "file_b": "annotator_set_1_B_annotated.csv",
+      "same_header": true,
+      "same_rows": false,
+      "rows_a": 1000,
+      "rows_b": 1000,
+      "row_diff_count": 81
+    },
+    {
+      "file_a": "annotator_set_2_A_annotated.csv",
+      "file_b": "annotator_set_2_B_annotated.csv",
+      "same_header": true,
+      "same_rows": false,
+      "rows_a": 1000,
+      "rows_b": 1000,
+      "row_diff_count": 1000
+    },
+    {
+      "file_a": "annotator_set_3_A_annotated.csv",
+      "file_b": "annotator_set_3_B_annotated.csv",
+      "same_header": true,
+      "same_rows": false,
+      "rows_a": 1000,
+      "rows_b": 1000,
+      "row_diff_count": 1000
+    }
+  ],
+  "subset_checks": [
+    {
+      "file": "annotator_set_1_A.csv",
+      "rows": 1000,
+      "rows_found_in_master": 1000,
+      "all_found": true
+    },
+    {
+      "file": "annotator_set_2_A.csv",
+      "rows": 1000,
+      "rows_found_in_master": 1000,
+      "all_found": true
+    },
+    {
+      "file": "annotator_set_3_A.csv",
+      "rows": 1000,
+      "rows_found_in_master": 1000,
+      "all_found": true
+    }
+  ]
+}

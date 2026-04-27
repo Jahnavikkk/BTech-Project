@@ -1,0 +1,44 @@
+[
+  {
+    "pair": [
+      "annotator_set_1_A_annotated.csv",
+      "annotator_set_1_B_annotated.csv"
+    ],
+    "rows_a": 1000,
+    "rows_b": 1000,
+    "shared_content_rows": 998,
+    "content_only_in_a": 2,
+    "content_only_in_b": 2,
+    "labels_compared_on_shared_rows": 996,
+    "label_equal_on_shared_rows": 921,
+    "label_disagree_on_shared_rows": 75
+  },
+  {
+    "pair": [
+      "annotator_set_2_A_annotated.csv",
+      "annotator_set_2_B_annotated.csv"
+    ],
+    "rows_a": 1000,
+    "rows_b": 1000,
+    "shared_content_rows": 945,
+    "content_only_in_a": 55,
+    "content_only_in_b": 55,
+    "labels_compared_on_shared_rows": 934,
+    "label_equal_on_shared_rows": 0,
+    "label_disagree_on_shared_rows": 934
+  },
+  {
+    "pair": [
+      "annotator_set_3_A_annotated.csv",
+      "annotator_set_3_B_annotated.csv"
+    ],
+    "rows_a": 1000,
+    "rows_b": 1000,
+    "shared_content_rows": 968,
+    "content_only_in_a": 32,
+    "content_only_in_b": 32,
+    "labels_compared_on_shared_rows": 964,
+    "label_equal_on_shared_rows": 920,
+    "label_disagree_on_shared_rows": 44
+  }
+]

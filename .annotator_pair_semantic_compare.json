@@ -1,0 +1,50 @@
+[
+  {
+    "pair": [
+      "annotator_set_1_A_annotated.csv",
+      "annotator_set_1_B_annotated.csv"
+    ],
+    "rows_compared": 1000,
+    "label_cols": [
+      "human_label(benign=0,malicious=1)",
+      "human_label(benign=0,malicious=1)"
+    ],
+    "base_columns_match_rows": 995,
+    "base_columns_match_all": false,
+    "both_labels_present_rows": 998,
+    "label_equal_rows": 923,
+    "label_disagree_rows": 75
+  },
+  {
+    "pair": [
+      "annotator_set_2_A_annotated.csv",
+      "annotator_set_2_B_annotated.csv"
+    ],
+    "rows_compared": 1000,
+    "label_cols": [
+      "human_label(benign=0,malicious=1)",
+      "human_label(benign=0,malicious=1)"
+    ],
+    "base_columns_match_rows": 837,
+    "base_columns_match_all": false,
+    "both_labels_present_rows": 988,
+    "label_equal_rows": 0,
+    "label_disagree_rows": 988
+  },
+  {
+    "pair": [
+      "annotator_set_3_A_annotated.csv",
+      "annotator_set_3_B_annotated.csv"
+    ],
+    "rows_compared": 1000,
+    "label_cols": [
+      "human_label(benign=0,malicious=1)",
+      "human_label(benign=0,malicious=1)"
+    ],
+    "base_columns_match_rows": 0,
+    "base_columns_match_all": false,
+    "both_labels_present_rows": 994,
+    "label_equal_rows": 906,
+    "label_disagree_rows": 88
+  }
+]
