@@ -9,16 +9,27 @@ The implementation and artifacts are built around DeBERTa-style classifier train
 
 ## Quick Demo
 
-This repository includes a minimal end-to-end demonstration of the safety pipeline.
+## Working Demo
 
-It shows:
+This project includes an end-to-end working demo for prompt injection detection.
 
-Prompt → Model Response → Classifier Prediction → Final Harmfulness Verdict
+Pipeline:
 
-Run:
+User Prompt  
+→ Victim LLM (Gemma / Qwen / Llama via Ollama)  
+→ Generated Response  
+→ Fine-tuned DeBERTa Classifier  
+→ Fine-tuned PromptGuard Classifier  
+→ Final Safety Verdict
 
-bash
-python src/demo.py
+### Run Demo
+
+Activate environment:
+
+```bash
+conda activate jahnvi
+move to project root : cd /workspace/amit/Jahanvi
+run: python demo.py
 
 ## What was actually run in this repo
 
